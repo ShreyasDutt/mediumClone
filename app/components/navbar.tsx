@@ -1,5 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
+import {
+    SignInButton,
+    SignUpButton,
+    SignedIn,
+    SignedOut,
+    UserButton,
+  } from '@clerk/nextjs'
 
 const Navbar = () => {
   return (
@@ -8,14 +15,30 @@ const Navbar = () => {
       Typora
     </Link>
     
+           
+            
+
     <div className="flex items-center gap-6">
-      <Link href="/signin" className=" text-gray-900 hover:text-gray-700">
-        Sign in
-      </Link>
-      <Link href="/get-started" className="bg-black text-white px-4 py-2 rounded-full">
-        Get started
-      </Link>
-    </div>
+     
+                <SignedOut>
+              <SignInButton>
+                <p className='font-serif font-medium text-gray-900 hover:text-gray-700'>Sign in</p>
+              </SignInButton>
+                </SignedOut>
+
+      <SignedOut>
+              <SignUpButton>
+                      <div  className="bg-black cursor-pointer text-white px-4 py-2 rounded-full">
+                      Get started
+                      </div>
+              </SignUpButton>
+                </SignedOut>
+
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+      </div>
+    
   </nav>
   )
 }

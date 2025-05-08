@@ -29,7 +29,7 @@ const Navbar = () => {
       <SignedOut>
               <SignUpButton>
                       <div  className="bg-black cursor-pointer text-white px-4 py-2 rounded-full">
-                      Get started
+                      Get Started
                       </div>
               </SignUpButton>
                 </SignedOut>

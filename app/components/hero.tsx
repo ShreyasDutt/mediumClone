@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
 const Hero = () => {
   return (
@@ -14,10 +15,26 @@ const Hero = () => {
                 <p className="text-xl md:text-2xl text-gray-800 my-8 font-serif">
                 A place to read, write, and deepen your understanding
                 </p>
+
                 
-                <Link href="/start-reading" className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full text-lg font-normal hover:bg-gray-800 transition-colors">
-                Start reading
-                </Link>
+                <SignedIn>
+                      <Link
+                        href="/start-reading"
+                        className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full text-lg font-normal hover:bg-gray-800 transition-colors"
+                      >
+                        Start reading
+                      </Link>
+              </SignedIn>
+
+
+              
+              <SignedOut>
+                  <SignInButton mode="modal">
+                    <div className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full text-lg font-normal hover:bg-gray-800 transition-colors cursor-pointer">
+                      Start reading
+                    </div>
+                  </SignInButton>
+              </SignedOut>
 
            
     

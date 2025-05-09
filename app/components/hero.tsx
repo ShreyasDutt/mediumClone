@@ -5,7 +5,7 @@ import { SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
 const Hero = () => {
   return (
-    <div className='flex w-full'>
+    <div className='flex w-full '>
             <div className="w-full bg-[#F7F4ED] lg:px-40 px-10 pb-20 mt-24">
                 <h1 className='tracking-tight'>
                 <span className="block text-6xl md:text-7xl lg:text-9xl font-medium text-gray-900 mb-2">Human</span>
@@ -20,7 +20,7 @@ const Hero = () => {
                 <SignedIn>
                       <Link
                         href="/start-reading"
-                        className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full text-lg font-normal hover:bg-gray-800 transition-colors"
+                        className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full text-lg font-normal hover:bg-gray-800 transition-colors font-sans"
                       >
                         Start reading
                       </Link>
@@ -30,7 +30,7 @@ const Hero = () => {
               
               <SignedOut>
                   <SignInButton mode="modal">
-                    <div className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full text-lg font-normal hover:bg-gray-800 transition-colors cursor-pointer">
+                    <div className="inline-block bg-gray-900 text-white px-8 rounded-full text-lg font-normal hover:bg-gray-800 transition-colors cursor-pointer font-sans">
                       Start reading
                     </div>
                   </SignInButton>
@@ -40,7 +40,7 @@ const Hero = () => {
     
             </div>
 
-            <div className='hidden md:block'>
+            <div className='hidden md:block '>
             <Image src="/heroimg.webp" alt="HeroImage" width={750} height={800} />                  
             </div>
 

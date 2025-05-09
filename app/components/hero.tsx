@@ -30,7 +30,7 @@ const Hero = () => {
               
               <SignedOut>
                   <SignInButton mode="modal">
-                    <div className="inline-block bg-gray-900 text-white px-8 rounded-full text-lg font-normal hover:bg-gray-800 transition-colors cursor-pointer font-sans">
+                    <div className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full text-lg font-normal hover:bg-gray-800 transition-colors font-sans">
                       Start reading
                     </div>
                   </SignInButton>
